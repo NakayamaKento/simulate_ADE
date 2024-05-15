@@ -1,5 +1,5 @@
 name: Simulate
-version: 0.0.1
+version: 0.0.2
 summary: some VM and Bastion
 description: Deploys 1 VM and Bastion Host
 runner: ARM
@@ -10,16 +10,18 @@ parameters:
   description: "Location to deploy the environment resources"
   default: "[resourceGroup().location]"
   type: "string"
-  required: false
+  required: true
 - id: "prefix"
   name: "prefix"
   description: "prefix of resources"
   default: "simu"
   type: "string"
-  required: false
+  required: true
 - id: "ImageVersion"
   name: "ImageVersion"
   description: "ImageVersion of VM"
   default: "333.0.0"
   type: "string"
-  required: false
+  required: true
+  allowed:
+    - "333.0.0"
