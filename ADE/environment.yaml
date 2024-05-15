@@ -1,0 +1,25 @@
+name: Simulate
+version: 0.0.1
+summary: some VM and Bastion
+description: Deploys 1 VM and Bastion Host
+runner: ARM
+templatePath: simulate.json
+parameters:
+- id: "location"
+  name: "location"
+  description: "Location to deploy the environment resources"
+  default: "[resourceGroup().location]"
+  type: "string"
+  required: false
+- id: "prefix"
+  name: "prefix"
+  description: "prefix of resources"
+  default: "simu"
+  type: "string"
+  required: false
+- id: "ImageVersion"
+  name: "ImageVersion"
+  description: "ImageVersion of VM"
+  default: "333.0.0"
+  type: "string"
+  required: false
