@@ -4,7 +4,7 @@ param location string = 'japaneast'
 param prefix string = 'simu'
 param ImageVersion string = '333.0.0'
 
-var CommonName = 'prefix${substring(uniqueString(resourceGroup().id), 0, 4)}'
+var CommonName = '${prefix}${substring(uniqueString(resourceGroup().id), 0, 4)}'
 var GoldenResourceGroup = 'simulate-rg'
 
 // イメージのギャラリーID

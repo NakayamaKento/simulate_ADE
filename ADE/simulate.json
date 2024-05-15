@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.27.1.19265",
-      "templateHash": "4688768418156750476"
+      "templateHash": "7350533401295357748"
     }
   },
   "parameters": {
@@ -24,7 +24,7 @@
     }
   },
   "variables": {
-    "CommonName": "[format('prefix{0}', substring(uniqueString(resourceGroup().id), 0, 4))]",
+    "CommonName": "[format('{0}{1}', parameters('prefix'), substring(uniqueString(resourceGroup().id), 0, 4))]",
     "GoldenResourceGroup": "simulate-rg",
     "ComputeGalleryId": "[format('{0}/providers/Microsoft.Compute/galleries/simulate_acg/images/define01/versions/{1}', resourceGroup().id, parameters('ImageVersion'))]"
   },
