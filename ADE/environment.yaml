@@ -10,18 +10,18 @@ parameters:
   description: "Location to deploy the environment resources"
   default: "[resourceGroup().location]"
   type: "string"
-  required: true
+  required: false
 - id: "prefix"
   name: "prefix"
   description: "prefix of resources"
   default: "simu"
   type: "string"
-  required: true
+  required: false
 - id: "ImageVersion"
   name: "ImageVersion"
   description: "ImageVersion of VM"
   default: "333.0.0"
   type: "string"
-  required: true
+  required: false
   allowed:
     - "333.0.0"
